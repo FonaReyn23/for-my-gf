@@ -1,30 +1,57 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <style></style>
     </head>
     <body>
-        <div id="desk1">
+        <div class="section" id="desk1">
             <p></p>
         </div>
-        <div id="desk2">
+        <div class="section" id="desk2">
             <p></p>
         </div>
-        <div id="desk3">
+        <div class="section" id="desk3">
             <p></p>
         </div>
-        <div id="desk4">
+        <div class="section" id="desk4">
             <p></p>
         </div>
-        <div id="desk2">
+        <div class="section" id="desk5">
             <p></p>
         </div>
-        <div id="desk6">
+        <div class="section" id="desk6">
             <p></p>
         </div>
+        
         <script src="wow18.35.26.js" charset="utf-8">
             new WOW().init();
+        </script>
+        
+        <script>
+            // Динамическая адаптация изображений
+            function adjustBackgrounds() {
+                const sections = document.querySelectorAll('.section');
+                const isMobile = window.innerWidth <= 768;
+                
+                sections.forEach(section => {
+                    // Если у вас есть отдельные мобильные версии изображений
+                    if (isMobile) {
+                        // Пример: замена desktop.svg на mobile.jpg
+                        // const currentBg = section.style.backgroundImage;
+                        // if (currentBg.includes('Desktop')) {
+                        //     const mobileBg = currentBg.replace('Desktop', 'Mobile').replace('.svg', '.jpg');
+                        //     section.style.backgroundImage = mobileBg;
+                        // }
+                    }
+                });
+            }
+            
+            // Вызов при загрузке и изменении размера окна
+            window.addEventListener('load', adjustBackgrounds);
+            window.addEventListener('resize', adjustBackgrounds);
         </script>
     </body>
 </html>
