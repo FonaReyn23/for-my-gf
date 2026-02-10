@@ -6,8 +6,7 @@
             
             body {
                 background-color: #BE3737;
-                padding-left: 8px;
-                padding-right: 8px;
+                padding: 8px;
                 font-family: sans-serif;
                 overflow-x: hidden;
             }
