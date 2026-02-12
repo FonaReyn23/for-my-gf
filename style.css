@@ -1,90 +1,86 @@
 * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
             
-            body {
-                background-color: #BE3737;
-                padding: 8px;
-                font-family: sans-serif;
-                overflow-x: hidden;
-            }
+body {
+    background-color: #BE3737;
+    padding: 8px;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
             
-            html {
-                scroll-behavior: smooth;
-            }
+html {
+    scroll-behavior: smooth;
+}
             
-            /* Общие стили для всех секций */
-            .section {
-                height: 100vh;
-                min-height: 600px;
-                width: 100%;
-                background-position: center center;
-                background-size: cover;
-                background-repeat: no-repeat;
-                border-radius: 40px;
-                position: relative;
-                margin-bottom: 16px;
-                overflow: hidden;
-            }
+/* Общие стили для всех секций */
+div {
+    height: 97.9vh;
+    min-height: 600px;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 70px;
+    position: relative;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+div:last-child{
+    height: 100vh;
+} 
+
+/* Для десктопов - используем большие изображения */
+#desk1 { background-image: url(Desktop-1.svg); }
+#desk2 { background-image: url(Desktop-2.svg); }
+#desk3 { background-image: url(Desktop-3.svg); }
+#desk4 { background-image: url(Desktop-4.svg); }
+#desk5 { background-image: url(Desktop-5.svg); }
+#desk6 { background-image: url(Desktop-61.svg); }
             
-            /* Для десктопов - используем большие изображения */
-            #desk1 { background-image: url(Desktop-1.svg); }
-            #desk2 { background-image: url(Desktop-2.svg); }
-            #desk3 { background-image: url(Desktop-3.svg); }
-            #desk4 { background-image: url(Desktop-4.svg); }
-            #desk5 { background-image: url(Desktop-5.svg); }
-            #desk6 { background-image: url(Desktop-61.svg); }
-            
-            /* Для мобильных устройств - адаптивные изменения */
-            @media(max-width: 1024px) {
-                body {
-                    padding-left: 4px;
-                    padding-right: 4px;
-                }
+/* Для мобильных устройств - адаптивные изменения */
+@media(max-width: 1024px) {
+    body {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
                 
-                .section {
-                    border-radius: 30px;
-                    margin-bottom: 8px;
-                    min-height: 500px;
-                }
-            }
+    div {
+        border-radius: 80px;
+        margin-bottom: 8px;
+        min-height: 500px;
+    }
+}
             
-            @media(max-width: 768px) {
-                .section {
-                    border-radius: 20px;
-                    min-height: 400px;
-                    background-size: contain;
-                    background-color: #BE3737; /* Фон на случай, если изображение не заполняет весь экран */
-                }
+@media(max-width: 768px) {
+    div {
+        border-radius: 80px;
+        min-height: 400px;
+        background-size: contain;
+        background-color: #BE3737; /* Фон на случай, если изображение не заполняет весь экран */
+    }
+}
+            
+@media(max-width: 480px) {
+    body {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
                 
-                /* Оптимизация для мобильных: можно добавить мобильные версии изображений */
-                /* Пример для #desk1 - если есть мобильная версия изображения */
-                /*
-                #desk1 {
-                    background-image: url(mobile-1.jpg);
-                }
-                */
-            }
+    div {
+        border-radius: 80px;
+        min-height: 300px;
+        margin-bottom: 4px;
+    }
+}
             
-            @media(max-width: 480px) {
-                body {
-                    padding-left: 2px;
-                    padding-right: 2px;
-                }
-                
-                .section {
-                    border-radius: 15px;
-                    min-height: 300px;
-                    margin-bottom: 4px;
-                }
-            }
-            
-            /* Для очень высоких экранов */
-            @media(min-height: 1200px) {
-                .section {
-                    background-size: contain;
-                    background-color: #BE3737;
-                }
-            }
+/* Для очень высоких экранов */
+@media(min-height: 1200px) {
+    div {
+        background-size: contain;
+        background-color: #BE3737;
+    }
+}
